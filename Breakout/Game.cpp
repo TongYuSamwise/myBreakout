@@ -7,17 +7,10 @@
 // Game-related State data
 SpriteRenderer* Renderer;
 
-// 初始化挡板的大小
-const glm::vec2 PLAYER_SIZE(100, 20);
-// 初始化当班的速率
-const GLfloat PLAYER_VELOCITY(500.0f);
+
 // Paddle
 GameObject* Player;
 
-// Initial velocity of the Ball
-const glm::vec2 INITIAL_BALL_VELOCITY(100.0f, -350.0f);
-// Radius of the ball object
-const float BALL_RADIUS = 12.5f;
 
 BallObject* Ball;
 ParticleGenerator* Particles;
@@ -111,6 +104,8 @@ void Game::Init()
         static_cast<GLfloat>(this->Height), 0.0f, -1.0f, 1.0f);
     ResourceManager::GetShader("sprite").Use().SetInteger("image", 0);
     ResourceManager::GetShader("sprite").SetMatrix4("projection", projection);
+    ResourceManager::GetShader("particle").Use().SetInteger("sprite", 0);
+    ResourceManager::GetShader("particle").SetMatrix4("projection", projection);
     // 设置专用于渲染的控制
     Renderer = new SpriteRenderer(ResourceManager::GetShader("sprite"));
     // 加载纹理
