@@ -2,7 +2,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/gtc/matrix_transform.hpp>
-#include "game.h"
+#include "Game.h"
 #include "resource_manager.h"
 
 #include <iostream>
