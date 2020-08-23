@@ -94,7 +94,7 @@
     <None Include="particle.fs.glsl">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="particle.vs.glsl">
+    <None Include="shaders\particle.vs.glsl">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

@@ -168,7 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="particle.fs.glsl" />
-    <None Include="particle.vs.glsl" />
+    <None Include="shaders\particle.vs.glsl" />
     <None Include="shaders\sprite.fs" />
     <None Include="shaders\sprite.vs" />
   </ItemGroup>
